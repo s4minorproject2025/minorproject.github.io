@@ -1,0 +1,171 @@
+
+<html>
+<head>
+    <title>Enter Patient Details</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap');
+
+        .box {
+            border-radius: 5px;
+            background: linear-gradient(to right, #0078FF, #0400CE);
+            box-shadow: 0 4px 8px rgba(0, 140, 129, 0.1);
+            padding: 50;
+            margin: 50;
+            height: justify;
+            display: flex;
+            align-items: center;
+        }
+
+        .box-form {
+            border-radius: 5px;
+            background: linear-gradient(to left, #DEDEDE, #FFFFFF);
+            box-shadow: 0 4px 8px rgba(0, 140, 129, 0.1);
+            padding: 50;
+            margin: 50;
+            height: justify;
+            width: 300px;
+            display: justify;
+            align-items: center;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .name,
+        .number,
+        .dob,
+        .gender,
+        .email {
+            display: flex;
+        }
+
+        .box-form .reset button,
+        .box-form .submit button {
+            background-color: #4169e1;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            
+        }
+
+        button:hover {
+            background-color: #1e90ff;
+        }
+
+        .box-form .name-input,
+        .number-input,
+        .dob-input,
+        .gender-input,
+        .email-input,
+        .district-input,
+        .locality-input {
+            width: 10%;
+            padding: 0px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #87ceeb;
+            border-radius: 4px;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gender-options label {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function updateLocalityDropdown() {
+            var districtDropdown = document.getElementById("district");
+            var localityDropdown = document.getElementById("locality");
+
+            localityDropdown.innerHTML = '<option value="">Select Locality</option>';
+
+            if (districtDropdown.value === "Thrissur") {
+                var thrissurLocalities = ["Kunnamkulam", "Kolazhi", "Vadanappilly"];
+                thrissurLocalities.forEach(function (locality) {
+                    var option = document.createElement("option");
+                    option.value = locality;
+                    option.text = locality;
+                    localityDropdown.appendChild(option);
+                });
+            }
+        }
+    </script>
+</head>
+
+<div class="box">
+    <form action="POST">
+        <div class="box-form">
+            <div class="name">
+                <a>Name :</a>
+                <div class="name-input">
+                    <input type="text" placeholder="patient name" id="patient-name">
+                </div>
+            </div>
+            <div class="dob">
+                <a> Date of Birth:</a>
+                <div class="dob-input">
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+            <div class="gender">
+                <a> Gender:</a>
+                <div class="gender-options">
+                    <label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                    <label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
+                </div>
+            </div>
+            <div class="number">
+                <a> Number :</a>
+                <div class="number-input">
+                    <input type="number" placeholder="enter your number" id="patient-number">
+                </div>
+            </div>
+            <div class="email">
+                <a> Email:</a>
+                <div class="email-input">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="district">
+                <a> choose district :</a>
+                <div class="district-input">
+                    <select id="district" onchange="updateLocalityDropdown()">
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                        <option value="Kollam">Kollam</option>
+                        <option value="Alappuzha">Alappuzha</option>
+                        <option value="Pathanamthitta">Pathanamthitta</option>
+                        <option value="Kottayam">Kottayam</option>
+                        <option value="Idukki">Idukki</option>
+                        <option value="Ernakulam">Ernakulam</option>
+                        <option value="Thrissur">Thrissur</option>
+                        <option value="Palakkad">Palakkad</option>
+                        <option value="Malappuram">Malappuram</option>
+                        <option value="Kozhikode">Kozhikode</option>
+                        <option value="Wayanad">Wayanad</option>
+                        <option value="Kannur">Kannur</option>
+                        <option value="Kasaragod">Kasaragod</option>
+                    </select>
+                </div>
+            </div>
+            <div class="locality">
+                <a> choose locality :</a>
+                <div class="locality-input">
+                    <select id="locality"> <option value="">Select Locality</option> </select>
+                </div>
+            </div>
+            <div class="reset" onclick="reset()">
+                <button type="reset"> reset</button>
+            </div>
+            <div class="submit" onclick="submit()">
+                <button type="submit"> submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</html>
