@@ -35,19 +35,20 @@
                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                             padding:15;
                             margin:50;
-                            background-color:#98c3f5;
+                            background: linear-gradient(to right, #0078FF, #0400CE);
                             display:flex;
                             height: justify;
+                            width:justify;
                           }
                .h-home, .h-signup, .h-login, .h-aboutus, .h-doctor{
                             border-radius:10px;
-                            background-color:#4287f5;
+                            background: linear-gradient(to left, #DEDEDE, #FFFFFF);
                             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                             padding:15;
                             margin:20;
                             padding-right: 30px;
                             display:flex;
-                            width:70px;
+                            width:justify;
                             height:14px;
                             
                           }
@@ -70,46 +71,56 @@
 					
      .content{
                             border-radius: 5px;
-                            background-color:#98c3f5;
+                            background: linear-gradient(to right, #0078FF, #0400CE);
 ;
                             box-shadow: 0 4px 8px rgba(0, 140, 129, 0.1);
                             padding:50;
                             margin:50;
                             height: justify;
+                            width:justify;
                             display:flex;
 
                           }
        .content-1, .content-2, .content-3 {
                             border-radius:5px;
-                            background-color:#726dff;
+                            background: linear-gradient(to left, #DEDEDE, #FFFFFF);
                             box-shadow: 0 4px 8px rgba(0, 194, 248, 0.1);
                             padding:50;
                             margin:50;
                             height: justify;
-                            width:200spx;
+                            width:justify;
                             display:flex;
-                            transition: ;
+                            
                                                              }
-          .content-1, .content-2, .content-3 h2 {
-                              font-family: 'Raleway', sans-serif;
-                              padding-right:10px;
-                              padding-left:10px;
-                              padding-top:10px;
-                              padding-bottom:10px;
-                              color: #000000;
-                              
-                              font-display: center;
-                              
-          }
+        
                               
                          
              .content-1, .content-2, .content-3 p {
                                    font-family: 'Raleway', sans-serif;
                                    text-decoration: none;
                                    display: inline-block;
-                                   color: #ffffff;
+                                   color: #000000;
                                    font-family: 'Prompt', sans-serif;
                                 }
+                                     .aboutus{
+                            border-radius: 5px;
+                            background: linear-gradient(to right, #0078FF, #0400CE);
+;
+                            box-shadow: 0 4px 8px rgba(0, 140, 129, 0.1);
+                            padding:50;
+                            margin:50;
+                            height: justify;
+                            width:justify;
+                            display:flex;
+                            
+                            
+                                   text-decoration: none;
+                                   display: inline-block;
+                                   color:#fff;
+                                   font-family: 'Prompt', sans-serif;
+
+                          }
+             
 </style>
           </style>
    </head>
@@ -125,53 +136,55 @@
              
              
               		    <div class="h-home">
-                  	     <a href=""> home </a>
+                  	     <a href="index.html"> home </a>
                   	  </div>
                   	  
                      <div class="h-signup">
-                       <a href=""> sign up </a>
+                       <a href="signup.html"> sign up </a>
                     </div>
                     
                    		  <div class="h-login">
-                      		 <a href=""> login </a>
+                      		 <a href="login.html"> login </a>
                       			 <span class="material-symbols-outlined">
 							login
 						</span>
                     		</div>
                     
         <div class="h-doctor">
-            <a href=""> doctor </a>
+            <a href="register.html"> doctor </a>
             <span class="material-symbols-outlined">
 stethoscope
 </span>
         </div>
         
                    		  <div class="h-aboutus">
-                  		     <a href=""> about us </a>
+                  		     <a href="#aboutus"> about us </a>
                 		    </div>
                     
           
       </div>
      			 <div class="content">
-     			           						 <div class="content-1">
-                                          <h2> Doctor Near Me</h2>
-                                          <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
-     			       				
-     									        </div>
-     									        <div class="content-2">
-                                       <h2> Doctor Near Me</h2>
-                                       <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
-                              
-     									        </div>
-
-                                        <div class="content-2">
-                                          <h2> Doctor Near Me</h2>
-                                          <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
-                                 
-                                           </div>
+               <div class="content-1">
+                  <h2>Find Specialized Doctors</h2>
+                  <p>Explore a wide range of specialized doctors and hospitals to meet your specific healthcare needs. Discover online appointment slots, practice locations, and book appointments for in-person  consultations with experts in various fields.</p>
+              </div>
+          
+              <div class="content-2">
+                  <h2>Emergency Medical Services</h2>
+                  <p>Access emergency medical services quickly and efficiently. Learn about nearby hospitals, available emergency doctors, and the process to secure urgent medical care. Book appointments for immediate clinic consultations or utilize video consultations for rapid assistance.</p>
+              </div>
+          
+              <div class="content-3">
+                  <h2>Personalized Health Plans</h2>
+                  <p>Take control of your health with personalized health plans. Consult with healthcare professionals to create a customized approach to your well-being. Book appointments for comprehensive clinic consultations or engage in video consultations for convenient healthcare management.</p>
+              </div>
      									        
      			       				
      			</div>
+</div>
+<div class="aboutus">
+	<p id="aboutus">
+		  "Book Your Doctor" is more than just a booking platform; it's your trusted healthcare companion. Our mission is to bridge the gap between you and top-tier medical professionals, ensuring that accessing quality healthcare is as easy as a few clicks. Whether it's a routine checkup or a specialist consultation, we've designed our platform to prioritize your convenience. Your health is personal, and so is our commitment to providing you with a reliable, efficient, and user-friendly experience. Welcome to a new era of healthcare accessibility with "Book Your Doctor."</p>
 </div>
                   
    </body>
